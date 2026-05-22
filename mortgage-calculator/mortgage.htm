@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <header>
+  <nav>
+    <a href="../index.html">Home</a> |
+    <a href="../applications.html">Applications</a>
+  </nav>
+  </header>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Mortgage Calculator | GymOps</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Quantico:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .mortgage-page {
+      padding: 80px 20px;
+      color: white;
+      background-color: #050505;
+      min-height: 100vh;
+    }
+
+    .mortgage-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .mortgage-wrapper h1 {
+      color: red;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .mortgage-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border: 1px solid red;
+      background-color: #111;
+    }
+
+    .mortgage-info,
+    .mortgage-form {
+      padding: 20px;
+    }
+
+    .mortgage-info {
+      border-right: 1px solid red;
+      line-height: 1.8;
+      color: #ccc;
+    }
+
+    .mortgage-form table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .mortgage-form td {
+      padding: 10px;
+      vertical-align: middle;
+    }
+
+    .mortgage-form input,
+    .mortgage-form select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid red;
+      background-color: #222;
+      color: white;
+      border-radius: 4px;
+    }
+
+    .mortgage-form input[type="button"],
+    .mortgage-form input[type="reset"] {
+      background-color: red;
+      border: none;
+      cursor: pointer;
+      color: white;
+      font-weight: bold;
+    }
+
+    .mortgage-form input[type="button"]:hover,
+    .mortgage-form input[type="reset"]:hover {
+      background-color: darkred;
+    }
+
+    @media (max-width: 768px) {
+      .mortgage-box {
+        grid-template-columns: 1fr;
+      }
+
+      .mortgage-info {
+        border-right: none;
+        border-bottom: 1px solid red;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="mortgage-page">
+    <div class="mortgage-wrapper">
+      <h1>Home Mortgage Calculator</h1>
+
+      <div class="mortgage-box">
+        <div class="mortgage-info">
+          <p>
+            To use the Home Mortgage Calculator enter the amount of the mortgage,
+            the interest of the loan, and the number of years. Then click on the
+            "Calculate" button to see an estimate of your monthly payment.
+          </p>
+        </div>
+
+        <div class="mortgage-form">
+          <form name="Form1">
+            <table>
+              <tr>
+                <td>Mortgage:</td>
+                <td><input type="text" name="Amount" value=" " size="9"></td>
+              </tr>
+              <tr>
+                <td>Interest (e.g. 7.9)</td>
+                <td><input type="text" name="Rate" value=" " size="9"></td>
+              </tr>
+              <tr>
+                <td>Years:</td>
+                <td>
+                  <select name="Years">
+                    <option value="0">0</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="25">25</option>
+                    <option value="30">30</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="button" value="Calculate" onclick="mortCalc(Form1)"></td>
+                <td><input type="reset" value="Reset"></td>
+              </tr>
+              <tr>
+                <td>Your monthly payment:</td>
+                <td><input type="text" name="Payment" size="9"></td>
+              </tr>
+            </table>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="calculator.js"></script>
+</body>
+</html>>

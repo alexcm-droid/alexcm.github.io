@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<header>
+  <nav>
+    <a href="../index.html">Home</a> |
+    <a href="../applications.html">Applications</a>
+  </nav>
+</header>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GymOps Invoice System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+  <!-- COMPANY HEADER -->
+  <section class="company-header">
+    <div class="company-info">
+      <h1>GymOps</h1>
+      <p>
+        2155 University Avenue<br>
+        Bronx, NY 10453<br>
+        Phone: (555) 555-5555 | Fax: (555) 555-1234
+      </p>
+    </div>
+  </section>
+
+  <!-- INVOICE HEADER -->
+  <section class="invoice-header">
+    <div class="invoice-meta">
+      <h2>Invoice #100</h2>
+      <label>
+        Date:
+        <input type="date" id="invoiceDate">
+      </label>
+    </div>
+  </section>
+
+  <!-- BILLING SECTION -->
+  <section class="billing-section">
+    <!-- BILL TO -->
+    <div class="bill-to">
+      <h3>Bill To</h3>
+      <input type="text" placeholder="Name | Company">
+      <input type="text" placeholder="Address, City, ST, ZIP Code">
+      <input type="text" placeholder="Phone Number">
+    </div>
+
+    <!-- FOR -->
+    <div class="invoice-for">
+      <h3>For</h3>
+      <input type="text" placeholder="Membership or Service Description">
+    </div>
+  </section>
+
+  <!-- INVOICE TABLE -->
+  <table>
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+
+    <tbody id="invoiceItems">
+      <tr>
+        <td>
+          <select class="membershipSelect">
+            <option value="25">Basic Membership - $25</option>
+            <option value="50">Premium Membership - $50</option>
+            <option value="85">Elite Membership - $85</option>
+          </select>
+        </td>
+        <td>
+          <input type="number" class="amount" value="0">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <input type="text" placeholder="Additional Services">
+        </td>
+        <td>
+          <input type="number" class="amount" value="0">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- COSTS -->
+  <section class="totals-section">
+    <label>
+      Tax Rate (%)
+      <input type="number" id="taxRate" value="8">
+    </label>
+
+    <label>
+      Other Costs
+      <input type="number" id="otherCosts" value="0">
+    </label>
+
+    <h3>
+      Subtotal: $<span id="subtotal">0.00</span>
+    </h3>
+
+    <h3>
+      Total: $<span id="total">0.00</span>
+    </h3>
+  </section>
+
+  <!-- BUTTONS -->
+  <section class="invoice-buttons">
+    <button id="addRow">Add Item</button>
+    <button id="clearInvoice">Clear Invoice</button>
+    <button id="printInvoice">Print Invoice</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

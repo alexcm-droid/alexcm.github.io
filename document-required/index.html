@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Documents</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      background-color: #050505;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: red;
+      margin-bottom: 25px;
+    }
+
+    .pdf-wrapper {
+      max-width: 1000px;
+      margin: 0 auto 30px;
+      border: 1px solid red;
+      background-color: #111;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .pdf-viewer {
+      width: 100%;
+      height: 750px;
+      border: none;
+      background: white;
+    }
+
+    .doc-button {
+      display: inline-block;
+      background-color: red;
+      color: white;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 5px;
+      transition: 0.3s ease;
+    }
+
+    .doc-button:hover {
+      background-color: darkred;
+    }
+  </style>
+</head>
+<body>
+ 
+  <header>
+  <nav>
+    <a href="../index.html">Home</a> |
+    <a href="../applications.html">Applications</a>
+  </nav>
+</header>
+  
+  <h1>Document Required</h1>
+
+  <div class="pdf-wrapper">
+    <object
+      data="files/Document Required.pdf"
+      type="application/pdf"
+      width="100%"
+      height="750"
+      class="pdf-viewer"
+    >
+      <iframe
+        src="files/Document Required.pdf"
+        width="100%"
+        height="750"
+        class="pdf-viewer"
+      ></iframe>
+    </object>
+  </div>
+
+  <a href="files/Document Required.pdf" target="_blank" class="doc-button">Open PDF</a>
+</body>
+</html>

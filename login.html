@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | GymOps</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Quantico:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="images/logo.png" alt="GymOps Logo">
+        <h1>GymOps</h1>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+      <li><a href="membership.html">Membership</a></li>
+
+      <li class="dropdown">
+        <a href="applications.html">Applications ▼</a>
+        <ul class="dropdown-menu">
+          <li><a href="mpg-calculator/index.html">MPG Calculator</a></li>
+          <li><a href="invoice-system/index.html">Invoice System</a></li>
+          <li><a href="mortgage-calculator/mortgage.htm">Mortgage Calculator</a></li>
+          <li><a href="document-required/index.html">Document Required</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="dashboard.html">Dashboard ▼</a>
+        <ul class="dropdown-menu">
+          <li><a href="dashboard.html">Member Dashboard</a></li>
+          <li><a href="admin.html">Admin Dashboard</a></li>
+          </ul>
+        </li>
+
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="login.html" class="is-active">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="login-page">
+      <h2>Member Login</h2>
+      <p>Access your GymOps membership dashboard.</p>
+
+      <form class="login-form">
+        <input type="email" placeholder="Email Address" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 GymOps. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

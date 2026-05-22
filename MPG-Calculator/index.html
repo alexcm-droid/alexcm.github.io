@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<header>
+  <nav>
+    <a href="../index.html">Home</a> |
+    <a href="../applications.html">Applications</a>
+  </nav>
+</header>
+
+<head>
+    <title>MPG Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>MPG Calculator</h1>
+
+    <!-- Optional graphic -->
+    <img src="https://cdn-icons-png.flaticon.com/512/744/744465.png" alt="Car Icon">
+
+    <label>Miles Traveled</label>
+    <input type="number" id="miles" placeholder="Enter miles">
+
+    <label>Gallons Used</label>
+    <input type="number" id="gallons" placeholder="Enter gallons">
+
+    <button onclick="calculateMPG()">Calculate MPG</button>
+
+    <p id="result"></p>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
